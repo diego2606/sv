@@ -1,11 +1,6 @@
 import React from "react"
 
-export const SongWidget = ({
-  song,
-  isActive,
-  isPlaying,
-  onSelect,
-}) => {
+export const SongWidget = ({ song, isActive, isPlaying, onSelect }) => {
   return (
     <div
       onClick={onSelect}

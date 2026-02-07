@@ -7,9 +7,9 @@ export const YouTubePlayer = ({
   onProgress,
   onEnded,
 }) => {
-  const playerRef = useRef<any>(null)
-  const progressInterval = useRef<number | null>(null)
-  const containerRef = useRef<HTMLDivElement>(null)
+  const playerRef = useRef < any > null
+  const progressInterval = (useRef < number) | (null > null)
+  const containerRef = useRef < HTMLDivElement > null
   const playerIdRef = useRef(
     `youtube-player-${Math.random().toString(36).substr(2, 9)}`,
   )

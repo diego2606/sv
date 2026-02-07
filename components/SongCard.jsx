@@ -1,11 +1,6 @@
 import React from "react"
 
-export const SongCard = ({
-  song,
-  isActive,
-  isPlaying,
-  onSelect,
-}) => {
+export const SongCard = ({ song, isActive, isPlaying, onSelect }) => {
   return (
     <div
       onClick={onSelect}

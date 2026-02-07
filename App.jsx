@@ -160,7 +160,6 @@ const App = () => {
         />
       ) : currentSong.audioUrl ? (
         <AudioPlayer
-          key={`audio-${currentSong.id}`}
           audioUrl={currentSong.audioUrl}
           isPlaying={isPlaying}
           volume={volume}
