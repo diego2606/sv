@@ -205,7 +205,7 @@ const App: React.FC = () => {
             title="Nuestra Historia"
             icon="history_edu"
             imageLabel="Foto de Nuestra Historia"
-            imageUrl="/img/IMG_6422.jpg"
+            imageUrl="img/IMG_6422.jpg"
             text="Todo comenzó de la manera más inesperada. Recuerdo el día exacto en que nos conocimos, el primer mensaje. Cada capítulo que hemos escrito juntos ha sido mejor que el anterior, llenando las páginas de mi vida con colores que no sabía que existían."
             delay="0.1s"
           />
@@ -214,7 +214,7 @@ const App: React.FC = () => {
             title="Nuestro Amor"
             icon="volunteer_activism"
             imageLabel="Foto de Nuestro Amor"
-            imageUrl="/img/IMG_20251220_233551.jpg"
+            imageUrl="img/IMG_20251220_233551.jpg"
             text="No es solo amor, es complicidad, es paz y es hogar. Contigo he aprendido lo que significa amar sin medidas. Me has enseñado a ver la vida con otros ojos y a valorar cada pequeño detalle."
             delay="0.2s"
             reverse={true}
