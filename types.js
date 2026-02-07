@@ -1,14 +1,4 @@
-export interface Song {
-  id: string
-  title: string
-  artist: string
-  youtubeId?: string // Optional: for YouTube videos
-  audioUrl?: string // Optional: for local audio files
-  duration: number // in seconds (approximate)
-  coverUrl: string
-}
-
-export const PLAYLIST: Song[] = [
+export const PLAYLIST = [
   {
     id: "1",
     title: "A Thousand Years",

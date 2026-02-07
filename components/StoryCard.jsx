@@ -1,16 +1,6 @@
 import React from "react"
 
-interface StoryCardProps {
-  title: string
-  icon: string
-  text: string
-  imageLabel: string
-  imageUrl?: string
-  delay?: string
-  reverse?: boolean
-}
-
-export const StoryCard: React.FC<StoryCardProps> = ({
+export const StoryCard = ({
   title,
   icon,
   text,

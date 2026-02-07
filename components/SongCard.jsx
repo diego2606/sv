@@ -1,14 +1,6 @@
 import React from "react"
-import { Song } from "../types"
 
-interface SongCardProps {
-  song: Song
-  isActive: boolean
-  isPlaying: boolean
-  onSelect: () => void
-}
-
-export const SongCard: React.FC<SongCardProps> = ({
+export const SongCard = ({
   song,
   isActive,
   isPlaying,

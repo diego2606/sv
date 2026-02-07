@@ -1,22 +1,6 @@
 import React, { useEffect, useRef } from "react"
 
-// Declaration for global YT variable
-declare global {
-  interface Window {
-    YT: any
-    onYouTubeIframeAPIReady: () => void
-  }
-}
-
-interface YouTubePlayerProps {
-  videoId: string
-  isPlaying: boolean
-  volume: number
-  onProgress: (currentTime: number, duration: number) => void
-  onEnded: () => void
-}
-
-export const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
+export const YouTubePlayer = ({
   videoId,
   isPlaying,
   volume,
@@ -104,11 +88,11 @@ export const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
           playsinline: 1,
         },
         events: {
-          onReady: (event: any) => {
+          onReady: (event) => {
             event.target.setVolume(volume)
             if (isPlaying) event.target.playVideo()
           },
-          onStateChange: (event: any) => {
+          onStateChange: (event) => {
             // YT.PlayerState.ENDED is 0
             if (event.data === 0) {
               onEnded()

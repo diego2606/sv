@@ -17,7 +17,7 @@ const useSize = () => {
   return size
 }
 
-export const ProposalCard: React.FC = () => {
+export const ProposalCard = () => {
   const [noCount, setNoCount] = useState(0)
   const [yesPressed, setYesPressed] = useState(false)
   const { width, height } = useSize()

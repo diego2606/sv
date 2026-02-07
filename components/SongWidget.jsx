@@ -1,14 +1,6 @@
 import React from "react"
-import { Song } from "../types"
 
-interface SongWidgetProps {
-  song: Song
-  isActive: boolean
-  isPlaying: boolean
-  onSelect: () => void
-}
-
-export const SongWidget: React.FC<SongWidgetProps> = ({
+export const SongWidget = ({
   song,
   isActive,
   isPlaying,

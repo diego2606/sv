@@ -1,24 +1,12 @@
 import React from "react"
-import { Song } from "../types"
 
-interface MusicWidgetProps {
-  playlist: Song[]
-  currentSongIndex: number
-  isPlaying: boolean
-  currentTime: number
-  duration: number
-  onPlayPause: () => void
-  onNext: () => void
-  onSongSelect: (index: number) => void
-}
-
-const formatTime = (time: number) => {
+const formatTime = (time) => {
   const minutes = Math.floor(time / 60)
   const seconds = Math.floor(time % 60)
   return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`
 }
 
-export const MusicWidget: React.FC<MusicWidgetProps> = ({
+export const MusicWidget = ({
   playlist,
   currentSongIndex,
   isPlaying,

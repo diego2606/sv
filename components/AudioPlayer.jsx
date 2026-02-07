@@ -1,21 +1,13 @@
 import React, { useEffect, useRef, useState } from "react"
 
-interface AudioPlayerProps {
-  audioUrl: string
-  isPlaying: boolean
-  volume: number // 0-100
-  onProgress: (currentTime: number, duration: number) => void
-  onEnded: () => void
-}
-
-export const AudioPlayer: React.FC<AudioPlayerProps> = ({
+export const AudioPlayer = ({
   audioUrl,
   isPlaying,
   volume,
   onProgress,
   onEnded,
 }) => {
-  const audioRef = useRef<HTMLAudioElement>(null)
+  const audioRef = useRef(null)
   const [isReady, setIsReady] = useState(false)
 
   // Handle audio source changes

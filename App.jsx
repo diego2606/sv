@@ -5,9 +5,9 @@ import { ProposalCard } from "./components/ProposalCard"
 import { YouTubePlayer } from "./components/YouTubePlayer"
 import { AudioPlayer } from "./components/AudioPlayer"
 import { SongWidget } from "./components/SongWidget"
-import { PLAYLIST } from "./types"
+import { PLAYLIST } from "./types.js"
 
-const App: React.FC = () => {
+const App = () => {
   const [hasStarted, setHasStarted] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentSongIndex, setCurrentSongIndex] = useState(0)
@@ -35,7 +35,7 @@ const App: React.FC = () => {
     setIsPlaying(true) // Auto play next
   }
 
-  const handleSongSelect = (index: number) => {
+  const handleSongSelect = (index) => {
     if (currentSongIndex === index) {
       // If same song, toggle play/pause
       setIsPlaying(!isPlaying)
@@ -47,7 +47,7 @@ const App: React.FC = () => {
     }
   }
 
-  const handleProgress = (curr: number, dur: number) => {
+  const handleProgress = (curr, dur) => {
     setCurrentTime(curr)
   }
 
