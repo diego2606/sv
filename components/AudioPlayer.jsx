@@ -21,11 +21,6 @@ export const AudioPlayer = ({
   // Handle ready state
   const handleCanPlay = () => {
     setIsReady(true)
-    if (isPlaying && audioRef.current) {
-      audioRef.current.play().catch((err) => {
-        console.error("Error playing audio:", err)
-      })
-    }
   }
 
   // Handle play/pause
@@ -33,9 +28,12 @@ export const AudioPlayer = ({
     if (!audioRef.current || !isReady) return
 
     if (isPlaying) {
-      audioRef.current.play().catch((err) => {
-        console.error("Error playing audio:", err)
-      })
+      const playPromise = audioRef.current.play()
+      if (playPromise !== undefined) {
+        playPromise.catch((err) => {
+          console.error("Error playing audio:", err)
+        })
+      }
     } else {
       audioRef.current.pause()
     }
@@ -49,7 +47,7 @@ export const AudioPlayer = ({
   }, [volume])
 
   const handleTimeUpdate = () => {
-    if (audioRef.current) {
+    if (audioRef.current && audioRef.current.duration) {
       onProgress(audioRef.current.currentTime, audioRef.current.duration)
     }
   }
